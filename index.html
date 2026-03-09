@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>💥 Poison in the Box 💥</title>
+
+  <!-- 🌈 External CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <main class="app">
+    <h1>💥 Poison in the Box 💥</h1>
+    <p class="subtitle">Secret poison game for 2–5 players!</p>
+
+    <!-- Player setup controls -->
+    <div class="controls">
+      <label>Players:
+        <select id="playerCount">
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </label>
+      <button id="nextBtn">Next</button>
+      <button id="setupBtn" style="display:none">Setup Game</button>
+      <button id="restartBtn" style="display:none">Restart</button>
+    </div>
+
+    <div id="nameInputs"></div>
+    <div id="playerSymbols"></div>
+
+    <div id="message" class="message">
+      Choose number of players and click <strong>Next</strong>.
+    </div>
+
+    <!-- Game grid -->
+    <div id="grid" class="grid"></div>
+    <div id="status" class="status"></div>
+  </main>
+
+  <!-- Overlay when picking poison -->
+  <div id="overlay" class="overlay hidden">
+    <div class="overlay-card">
+      <div id="overlayText">Player 1: Others close your eyes!</div>
+      <button id="overlayOk">I'm Ready</button>
+    </div>
+  </div>
+
+  <!-- Cartoon popup -->
+  <div id="cartoon" class="cartoon hidden">
+    <div class="cartoon-face">😵</div>
+    <div id="cartoonText">Player got poisoned!</div>
+  </div>
+
+  <!-- 💻 External JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
